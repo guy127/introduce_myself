@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive introduction website for PEA DEVPOOL application with live Open API integration.">
+    <title>Introduce - พงศธร ดีกระโทก | DEVPOOL Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="bg-orb orb-one"></div>
+    <div class="bg-orb orb-two"></div>
+    <div class="bg-orb orb-three"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav class="top-nav glass-panel">
+        <a class="brand" href="#home" aria-label="Go to home">
+            <span class="brand-mark">P</span>
+            <span>PEA DEVPOOL</span>
+        </a>
+        <div class="nav-links" aria-label="Main navigation">
+            <a href="#profile">Profile</a>
+            <a href="#api-lab">Open API</a>
+            <a href="#why">Why DEVPOOL</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">
+            <span id="themeIcon">🌙</span>
+            <span id="themeText">Night</span>
+        </button>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-grid">
+            <section class="hero-copy reveal">
+                <p class="eyebrow"><span class="pulse-dot"></span> Hotline PEA Level 4 • Interactive Profile</p>
+                <h1>
+                    นายพงศธร<br>
+                    <span>ดีกระโทก</span>
+                </h1>
+                <p class="hero-subtitle">
+                    เว็บไซต์แนะนำตัวแบบมีชีวิต เชื่อมต่อข้อมูลจริงผ่าน Open API พร้อม Motion UI สำหรับการสมัคร DEVPOOL
+                </p>
+                <div class="hero-actions">
+                    <a class="primary-btn magnetic" href="#api-lab">ดู Live API</a>
+                    <a class="secondary-btn magnetic" href="#profile">ดูโปรไฟล์</a>
+                </div>
+            </section>
+
+            <section class="hero-visual reveal delay-1" aria-label="Profile visual card">
+                <div class="profile-halo"></div>
+                <div class="profile-card glass-panel tilt-card">
+                    <div class="profile-status">
+                        <span></span>
+                        Available for DEVPOOL
+                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Profile placeholder" class="profile-pic">
+                    <h2>Hotline PEA Level 4</h2>
+                    <p>Electrical Operation • Field Service • Programming Enthusiast</p>
+                    <div class="signal-bars" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="hero-stats reveal delay-2">
+            <div class="stat glass-panel">
+                <strong data-counter="510162">0</strong>
+                <span>Employee ID</span>
+            </div>
+            <div class="stat glass-panel">
+                <strong data-counter="4">0</strong>
+                <span>Hotline Level</span>
+            </div>
+            <div class="stat glass-panel">
+                <strong data-counter="2">0</strong>
+                <span>Live APIs</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section profile-section" id="profile">
+            <div class="section-heading reveal">
+                <p class="eyebrow">01 • Personal Information</p>
+                <h2>แนะนำตัว</h2>
+                <p>ข้อมูลหลักถูกจัดใหม่ให้อ่านง่ายขึ้น พร้อม card interaction และ responsive layout</p>
+            </div>
+
+            <div class="info-layout">
+                <article class="info-card glass-panel reveal tilt-card">
+                    <span class="card-icon">👤</span>
+                    <h3>ชื่อ - นามสกุล</h3>
+                    <p>นายพงศธร ดีกระโทก</p>
+                </article>
+                <article class="info-card glass-panel reveal delay-1 tilt-card">
+                    <span class="card-icon">🆔</span>
+                    <h3>รหัสพนักงาน</h3>
+                    <p>510162</p>
+                </article>
+                <article class="info-card glass-panel reveal delay-2 tilt-card">
+                    <span class="card-icon">⚡</span>
+                    <h3>ตำแหน่ง</h3>
+                    <p>พนักงานช่าง(ฮอทไลน์) ระดับ 4</p>
+                </article>
+                <article class="info-card wide glass-panel reveal delay-3 tilt-card">
+                    <span class="card-icon">🏢</span>
+                    <h3>สังกัด</h3>
+                    <p>แผนกปฏิบัติการและบำรุงรักษาระบบไฟฟ้า การไฟฟ้าส่วนภูมิภาคจังหวัดประจวบคีรีขันธ์</p>
+                    <small>กฟภ. เขต 1 ภาคใต้ จังหวัดเพชรบุรี สายงานภาคใต้</small>
+                </article>
+            </div>
+        </section>
+
+        <section class="section api-section" id="api-lab">
+            <div class="section-heading reveal">
+                <p class="eyebrow">02 • Live Open API Lab</p>
+                <h2>ปลั๊กอิน Open API แบบ Live</h2>
+                <p>เชื่อมต่อ API สาธารณะโดยไม่ต้องใช้ API key: Weather API + Country Data API พร้อม loading state และ refresh interaction</p>
+            </div>
+
+            <div class="api-toolbar reveal delay-1">
+                <button class="primary-btn magnetic" id="refreshApiBtn" type="button">↻ Refresh API</button>
+                <span id="apiUpdatedText">กำลังโหลดข้อมูลล่าสุด...</span>
+            </div>
+
+            <div class="api-grid">
+                <article class="api-card glass-panel reveal tilt-card" id="weatherCard">
+                    <div class="api-card-head">
+                        <div>
+                            <p class="api-label">Open-Meteo</p>
+                            <h3>Bangkok Weather</h3>
+                        </div>
+                        <span class="api-badge live">LIVE</span>
+                    </div>
+                    <div id="weatherContent" class="api-content skeleton-state">
+                        <div class="skeleton large"></div>
+                        <div class="skeleton"></div>
+                        <div class="skeleton short"></div>
+                    </div>
+                </article>
+
+                <article class="api-card glass-panel reveal delay-1 tilt-card" id="countryCard">
+                    <div class="api-card-head">
+                        <div>
+                            <p class="api-label">GitHub REST API</p>
+                            <h3>Open API Repository</h3>
+                        </div>
+                        <span class="api-badge">OPEN</span>
+                    </div>
+                    <div id="countryContent" class="api-content skeleton-state">
+                        <div class="skeleton large"></div>
+                        <div class="skeleton"></div>
+                        <div class="skeleton short"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section why-section" id="why">
+            <div class="section-heading reveal">
+                <p class="eyebrow">03 • Motivation</p>
+                <h2>เหตุผลที่อยากเข้า DEVPOOL</h2>
+            </div>
+
+            <div class="motivation-layout">
+                <article class="quote-card glass-panel reveal">
+                    <span class="quote-mark">“</span>
+                    <p>อยากจะพัฒนาสกิลด้านโปรแกรมมิ่งให้อยู่ในขั้นที่ใช้งานได้ โดยส่วนตัวมีความสนใจและศึกษาด้วยตัวเองมาอย่างต่อเนื่อง และอยากร่วมงานกับผู้เชี่ยวชาญในสายงานด้านนี้ครับ</p>
+                </article>
+                <article class="image-card reveal delay-1 tilt-card">
+                    <img src="https://static.workventure.com/uploads/images/blog/img_3694-qbvz.jpg" alt="Programming workspace">
+                    <div class="image-overlay">
+                        <span>Learning by Building</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section interests-section">
+            <div class="section-heading reveal">
+                <p class="eyebrow">04 • Activities</p>
+                <h2>กิจกรรมและความสนใจ</h2>
+            </div>
+
+            <div class="interest-timeline">
+                <article class="timeline-item reveal">
+                    <span>01</span>
+                    <div>
+                        <h3>Ocean & Water Sports</h3>
+                        <p>รักการท้าทายขีดจำกัดตัวเองผ่านการดำน้ำ Freediving, Scuba และการเล่นเซิร์ฟ</p>
+                    </div>
+                </article>
+                <article class="timeline-item reveal delay-1">
+                    <span>02</span>
+                    <div>
+                        <h3>Health & Fitness</h3>
+                        <p>ให้ความสำคัญกับการดูแลสุขภาพ จัดตารางโภชนาการ และการสร้างกล้ามเนื้อ</p>
+                    </div>
+                </article>
+                <article class="timeline-item reveal delay-2">
+                    <span>03</span>
+                    <div>
+                        <h3>Digital Art & Design</h3>
+                        <p>ชอบใช้ความคิดสร้างสรรค์ผ่านงานกราฟิกดีไซน์และการตกแต่งภาพ</p>
+                    </div>
+                </article>
+                <article class="timeline-item reveal delay-3">
+                    <span>04</span>
+                    <div>
+                        <h3>Music & Gaming</h3>
+                        <p>ชอบฟังเพลงแนว R&B กับ Folk และสนุกกับเกมแนว Life Simulation</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <div class="section-heading reveal">
+                <p class="eyebrow">05 • Contact</p>
+                <h2>ช่องทางการติดต่อ</h2>
+            </div>
+
+            <div class="social-grid reveal delay-1">
+                <a href="https://www.facebook.com/Guypst" target="_blank" rel="noopener" class="social-btn fb tilt-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/500px-Facebook_f_logo_%282021%29.svg.png" alt="Facebook">
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/g_uyp/" target="_blank" rel="noopener" class="social-btn ig tilt-card">
+                    <img src="https://iconape.com/wp-content/files/ak/70032/svg/instagram-2-1.svg" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <a href="https://line.me/ti/p/z7fSYfx4wa" target="_blank" rel="noopener" class="social-btn line tilt-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/LINE_logo.svg/330px-LINE_logo.svg.png" alt="LINE">
+                    <span>LINE</span>
+                </a>
+                <a href="https://x.com/guywanttogohome" target="_blank" rel="noopener" class="social-btn x tilt-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/X_icon.svg/3840px-X_icon.svg.png" alt="X">
+                    <span>X</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 พงศธร ดีกระโทก — PEA DEVPOOL Application</p>
+        <p class="footer-note">Built with HTML, CSS, JavaScript, Open-Meteo API and GitHub REST API</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
